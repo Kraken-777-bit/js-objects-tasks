@@ -1,5 +1,10 @@
-import _ from 'lodash';
+import _, { capitalize } from 'lodash';
 
 // BEGIN
+const normalize = (lesson) => {
+    lesson.name = _.capitalize(lesson.name.toLowerCase());
+    lesson.description = lesson.description.toLowerCase();
+};
 
-  // END
+export default normalize;
+// END
